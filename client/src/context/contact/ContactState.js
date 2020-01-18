@@ -49,12 +49,12 @@ const ContactState = props => {
     dispatch({ type: CLEAR_CURRENT });
   };
 
-  const clearFilter = () => {
-    dispatch({ type: CLEAR_FILTER });
-  };
-
   const filterContacts = text => {
     dispatch({ type: FILTER_CONTACTS, payload: text });
+  };
+
+  const clearFilter = () => {
+    dispatch({ type: CLEAR_FILTER });
   };
 
   return (
