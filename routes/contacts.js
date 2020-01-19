@@ -99,7 +99,7 @@ router.post('/:id', auth, async (req, res) => {
 // @route   DELETE api/contacts/:id
 // @desc    Delete contact
 // @access  Private
-router.post('/:id', auth, async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   try {
     let contact = await Contact.findById(req.params.id);
     if (!contact) return res.status(404).json({ msg: 'Contact Not Found' });
