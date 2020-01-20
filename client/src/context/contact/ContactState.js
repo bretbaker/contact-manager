@@ -27,6 +27,7 @@ const ContactState = props => {
   const getContacts = async () => {
     try {
       const res = await axios.get('/api/contacts');
+      res.data = res.data.sort((a, b) => a.name.localeCompare(b.name));
       dispatch({ type: GET_CONTACTS, payload: res.data });
     } catch (err) {
       dispatch({ type: CONTACT_ERROR, payload: err.response.msg });

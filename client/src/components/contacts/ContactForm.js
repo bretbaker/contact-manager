@@ -35,10 +35,13 @@ const ContactForm = () => {
     e.preventDefault();
     if (current === null) {
       addContact(contact);
+      clearAll();
+      window.location.reload();
     } else {
-      updateContact(contact);
+      updateContact(contact, current);
+      clearAll();
+      window.location.reload();
     }
-    clearAll();
   };
 
   const clearAll = () => {
