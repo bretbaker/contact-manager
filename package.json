@@ -9,19 +9,20 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bretbaker808/contact-manager.git"
+    "url": "git+https://github.com/bretbaker/contact-manager.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bretbaker808/contact-manager/issues"
+    "url": "https://github.com/bretbaker/contact-manager/issues"
   },
-  "homepage": "https://github.com/bretbaker808/contact-manager#readme",
+  "homepage": "https://github.com/bretbaker/contact-manager#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.4",
